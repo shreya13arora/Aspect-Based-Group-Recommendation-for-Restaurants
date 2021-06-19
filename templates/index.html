@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation System</title>
+</head>
+<body style="height: 100%; max-height: 100%; min-height: 100%;">
+
+  <section id="nav-bar">
+    <nav class="navbar-light navbar navbar-expand-lg" style="background-color: #e3f2fd !important;background-image: url();">
+        <div class="container-fluid">
+          <a class="navbar-brand" href=#><img src="/static/Logo1.png" ondragstart="return false;" alt="logo" width="60px"  /></a>
+
+          
+          <h2 style="color: rgb(0, 0, 0);text-align: center;">SQUAD-DINEOUT - "We recommend what you guys value the most"</h2>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Our Team</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+    </nav>
+</section>
+    
+    <section class="header" style="background-image: url('/static/eating_food.jfif');background-repeat: no-repeat;background-size: cover;height: 100%;" >
+    <br></br>  
+      <div class="container">
+            <h1 class="text-nowrap bd-highlight"  style="color: white; background-color: rgba(0, 0, 0, 0.315); width: fit-content; " >Select Friends</h1>
+            
+            <form action="/api" method="POST">
+                <select class="form-select form-select-sm" size="6" multiple aria-label="Select Any Number of Name" name="user_friends_list" style="width: 300px">
+                    <option value="u0x3SXagjYDbI2N4sgJ0Tw">Anirudha Nayak</option>
+                    <option value="80MUDP_Ny_J8jeShVxzdlw">Shreya Arora</option>
+                    <option value="p8yQsVA51dzkc9cecDpvrw">Shivani Nehra</option>
+                    <option value="byro3oSQQ1gRESKlfiAqtQ">Anirudh Sharma</option>
+                    <option value="e_YQl5LBR7Gdrp_1vdj1yQ">Tanvi Gawai</option>
+                    <option value="kZJWAY828P8QZTqVYzhTCg">Rajat Kumar</option>
+                    <option value='9JdlfwAdVY0DR5rPU_4WPQ'>Hema Rahate</option>
+                </select>
+                
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg" style="width: 300px">Get Recommendation</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
